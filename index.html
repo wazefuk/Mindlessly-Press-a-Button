@@ -4,15 +4,19 @@
         <meta charset="UTF-8">
         <title>Mindlessly Press a Button!</title>
         <link rel="stylesheet" href="Style.css">
-        <meta name="description" content="A weird little clicker game">
+        <meta name="description" content="A weird little clicker game :P">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1 id="Title">Mindlessly Press a Button</h1>
-        <button id="theButton" class="ui" onclick="press()">Button</button>
+        <h1 id="Title" class="outlined-thick">Mindlessly Press a Button</h1>
+        <button id="theButton" class="ui outlined-thin" onclick="press()">Button</button>
         <div class="pressgoldp">
-            <p id="pressp"></p>
-            <p id="goldp"></p>
+            <p id="pressp" class="uimoneyp">0 Presses</p>
+            <p id="goldp" class="outlined-thin uimoneyp">0 gold</p>
         </div>
+        <hr class="hr-thick">
+        <h2 id="shoppressheader" class="outlined-thick shopheader">Shop</h2>
+        <button class="upg rr" id="upg-press1" onclick="buyUpgrade(1)">+1 Presses per Press ($180)</button>
+        <script src="index.js"></script>
     </body>
 </html>
