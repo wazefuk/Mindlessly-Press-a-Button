@@ -1,0 +1,26 @@
+body{
+    padding: 2em;
+    display: grid;
+    overflow-x: hidden;
+}
+
+#Title {
+    color: rebeccapurple;
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+#theButton{
+    margin: auto;
+    font-size: 5.5em;
+    font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    transform: scaleX(1.1);
+    background-color: inherit;
+    border: none;
+    color: rebeccapurple;
+}
