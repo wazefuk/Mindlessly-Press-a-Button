@@ -1,4 +1,4 @@
-var Presses = 999999999;
+var Presses = 0;
 var PressesPerPress = 1;
 var AutoclickerDelay = 5000;
 var Gold = 0;
