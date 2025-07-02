@@ -1,6 +1,6 @@
 var Presses = 0;
 var PressesPerPress = 1;
-var AutoclickerDelay = 5000;
+var AutoclickerDelay = 500;
 var Gold = 0;
 var autoclickerBuy = false;
 
@@ -58,12 +58,6 @@ function buyUpgrade(input) {
                 Autoclicker();
                 document.getElementById("upg-autoclicker").disabled = true;
                 autoclickerBuy = true;
-                break;
-            }
-        case 4:
-            if (Presses >= 2200 && AutoclickerDelay > 80) {
-                Presses -= 2200;
-                AutoclickerDelay -= 20;
                 break;
             }
     }
