@@ -11,12 +11,17 @@
         <h1 id="Title" class="outlined-thick">Mindlessly Press a Button</h1>
         <button id="theButton" class="ui outlined-thin" onclick="press()">Button</button>
         <div class="pressgoldp">
-            <p id="pressp" class="uimoneyp">0 Presses</p>
+            <p id="pressp" class="uimoneyp">0 presses</p>
+            <p id="pppp" class="uimoneyp">1 presses per press</p>
             <p id="goldp" class="outlined-thin uimoneyp">0 gold</p>
         </div>
         <hr class="hr-thick">
         <h2 id="shoppressheader" class="outlined-thick shopheader">Shop</h2>
-        <button class="upg rr" id="upg-press1" onclick="buyUpgrade(1)">+1 Presses per Press ($180)</button>
+        <button class="upg rr" id="upg-press1" onclick="buyUpgrade(1)">+1 Presses per Press ($360)</button>
+        <button class="upg rl" id="upg-press5" onclick="buyUpgrade(2)">+5 Presses per Press ($800)</button>
+        <button class="upg rr" id="upg-autoclicker" onclick="buyUpgrade(3)">Autoclicker ($3500)</button>
+        <button class="upg rr" id="upg-autoclickerefficient" onclick="buyUpgrade(4)">Autoclicker Efficiency ($2200)</button>
+        <h2 id="goldpressheader" class="outlined-thick shopheader">Gold Shop</h2>
         <script src="index.js"></script>
     </body>
 </html>
