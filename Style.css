@@ -111,6 +111,10 @@ hr{ margin: 0; }
     display: block;
 }
 
+#pppp{
+    display: none;
+}
+
 .upg:disabled {
     color: red !important;
 }
