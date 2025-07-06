@@ -21,12 +21,12 @@ function sleep(ms) {
 
 function updateUI() {
     Button.style.rotate = Presses % 360 + "deg";
-    Pressp.innerText = Presses + " presses";
+    Pressp.innerText = Presses + (Presses === 1 ? " press" : " presses");
     Goldp.innerText = Gold + " gold";
     Pressesperpressp.innerHTML = PressesPerPress + " presses per press";
     document.getElementById("upg-press1").disabled = Presses < 360;
     document.getElementById("upg-press5").disabled = Presses < 850;
-    document.getElementById("upg-autoclicker").disabled = Presses < 350 || autoclickerBuy;
+    document.getElementById("upg-autoclicker").disabled = Presses < 3500 || autoclickerBuy;
 }
 
 function press() {
@@ -50,8 +50,8 @@ function buyUpgrade(input) {
             }
             break;
         case 2:
-            if (Presses >= 800) {
-                Presses -= 800;
+            if (Presses >= 850) {
+                Presses -= 850;
                 PressesPerPress += 5;
             }
             break;
@@ -66,6 +66,7 @@ function buyUpgrade(input) {
             break;
         default:
             console.log("Invalid upgrade ID, no logic found");
+            break;
     }
     updateUI();
 }
