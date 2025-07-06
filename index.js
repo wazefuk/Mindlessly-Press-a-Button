@@ -1,3 +1,4 @@
+// Sorry if a lot of this could be better, I suck at JavaScript and 99% of this (i.e. addEventListener and everything async) took a billion Googles
 var Presses = 0;
 var PressesPerPress = 1;
 var AutoclickerDelay = 500;
@@ -65,7 +66,7 @@ function buyUpgrade(input) {
             }
             break;
         default:
-            console.log("Invalid upgrade ID, no logic found");
+            console.log("Invalid upgrade ID" + input + ", no logic found");
             break;
     }
     updateUI();
