@@ -10,8 +10,15 @@ const Pressp = document.getElementById("pressp");
 const Goldp = document.getElementById("goldp");
 const Pressesperpressp = document.getElementById("pppp");
 
+window.addEventListener('keydown', function(e) {
+  if (e.key === ' ' && e.target === document.body) {
+    e.preventDefault(); // of course this doesn't work on Firefox for some reason
+  }
+});
+
 document.addEventListener('keyup', (event) => {
     if (event.key === ' ' || event.key === 'Enter' || event.key === 'e') {
+        event.preventDefault();
         press();
     }
 });
