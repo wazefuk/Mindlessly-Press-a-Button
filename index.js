@@ -1,4 +1,4 @@
-var Presses = 0;
+var Presses = 36000;
 var PressesPerPress = 1;
 var AutoclickerDelay = 500;
 var Gold = 0;
@@ -20,10 +20,13 @@ function sleep(ms) {
 }
 
 function updateUI() {
-    Button.style.rotate = Presses + "deg";
+    Button.style.rotate = Presses % 360 + "deg";
     Pressp.innerText = Presses + " presses";
     Goldp.innerText = Gold + " gold";
     Pressesperpressp.innerHTML = PressesPerPress + " presses per press";
+    document.getElementById("upg-press1").disabled = Presses < 360;
+    document.getElementById("upg-press5").disabled = Presses < 850;
+    document.getElementById("upg-autoclicker").disabled = Presses < 350 || autoclickerBuy;
 }
 
 function press() {
@@ -44,22 +47,25 @@ function buyUpgrade(input) {
             if (Presses >= 360) {
                 Presses -= 360;
                 PressesPerPress++;
-                break;
             }
+            break;
         case 2:
             if (Presses >= 800) {
                 Presses -= 800;
                 PressesPerPress += 5;
-                break;
             }
+            break;
         case 3:
             if (Presses >= 3500 && autoclickerBuy == false) {
                 Presses -= 3500;
                 Autoclicker();
                 document.getElementById("upg-autoclicker").disabled = true;
+                document.getElementById("upg-autoclicker").title = "Already bought!";
                 autoclickerBuy = true;
-                break;
             }
+            break;
+        default:
+            console.log("Invalid upgrade ID, no logic found");
     }
     updateUI();
 }

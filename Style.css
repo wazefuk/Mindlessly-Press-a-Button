@@ -117,5 +117,5 @@ hr{ margin: 0; }
 
 .upg:hover { cursor: pointer; }
 
-.rr:hover { transform: rotateX('20deg') }
-.rl:hover { transform: rotateX('-20deg') }
+.rr:hover:enabled { transform: rotateZ(10deg) }
+.rl:hover:enabled { transform: rotateZ(-10deg) }
