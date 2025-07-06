@@ -16,11 +16,17 @@
             <p id="goldp" class="outlined-thin uimoneyp">0 gold</p>
         </div>
         <hr class="hr-thick">
-        <h2 id="shoppressheader" class="outlined-thick shopheader">Shop</h2>
-        <button class="upg rr" id="upg-press1" onclick="buyUpgrade(1)">+1 Presses per Press ($360)</button>
-        <button class="upg rl" id="upg-press5" onclick="buyUpgrade(2)">+5 Presses per Press ($850)</button>
-        <button class="upg rr" id="upg-autoclicker" onclick="buyUpgrade(3)">Autoclicker ($3500)</button>
-        <h2 id="goldpressheader" class="outlined-thick shopheader">Gold Shop</h2>
+        <div class="shop">
+            <div class="shoppress">
+                <h2 id="shoppressheader" class="outlined-thick shopheader">Shop</h2>
+                <button class="upg rr" id="upg-press1" onclick="buyUpgrade(1)">+1 Presses per Press ($360)</button>
+                <button class="upg rl" id="upg-press5" onclick="buyUpgrade(2)">+5 Presses per Press ($850)</button>
+                <button class="upg rr" id="upg-autoclicker" onclick="buyUpgrade(3)">Autoclicker ($3500)</button>
+            </div>
+            <div class="shopgold">
+                <h2 id="goldpressheader" class="outlined-thick shopheader">Gold Shop</h2>
+            </div>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
