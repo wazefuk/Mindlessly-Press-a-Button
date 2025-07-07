@@ -91,7 +91,7 @@ hr{ margin: 0; }
 }
 
 .upg {
-    margin: 0;
+    margin: auto;
     color: yellow;
     text-shadow:
         -1px -1px 0 black,

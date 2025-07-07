@@ -10,6 +10,8 @@ const Pressp = document.getElementById("pressp");
 const Goldp = document.getElementById("goldp");
 const Pressesperpressp = document.getElementById("pppp");
 
+const sound_click = new Audio('media/click.wav');
+
 window.addEventListener('keydown', function(e) {
   if (e.key === ' ' && e.target === document.body) {
     e.preventDefault(); // of course this doesn't work on Firefox for some reason
@@ -39,6 +41,7 @@ function updateUI() {
 
 function press() {
     Presses += PressesPerPress;
+    sound_click.play();
     updateUI();
 }
 
